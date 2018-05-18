@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="pipes-style.css">
+        <link rel="stylesheet" href="dist/xterm.css" />
+        <script src="dist/xterm.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="name">
+                <div class="title" style="width: auto; vertical-align: middle; height: 2.5em;"> Pipes </div>
+                <div style="line-height: 1.2; letter-spacing: -1px; display: inline-block;">
+                    <div style="display: flex;">
+                        <div style="color: #777777; display: inline;">&#9608;&#9608;&#9608;</div>
+                        <div style="color: #FF0055; display: inline;">&#9608;&#9608;&#9608;</div>
+                        <div style="color: #739100; display: inline;">&#9608;&#9608;&#9608;</div>
+                        <div style="color: #503D15; display: inline;">&#9608;&#9608;&#9608;</div>
+                        <div style="color: #416979; display: inline;">&#9608;&#9608;&#9608;</div>
+                        <div style="color: #5B345E; display: inline;">&#9608;&#9608;&#9608;</div>
+                        <div style="color: #487B8F; display: inline;">&#9608;&#9608;&#9608;</div>
+                        <div style="color: #999999; display: inline;">&#9608;&#9608;&#9608;</div>
+                    </div>
+                    <div style="display: flex; top: 0px;">
+                        <div style="color: #999999; display: inline;">&#9608;&#9608;&#9608;</div>
+                        <div style="color: #D65E76; display: inline;">&#9608;&#9608;&#9608;</div>
+                        <div style="color: #88AA0B; display: inline;">&#9608;&#9608;&#9608;</div>
+                        <div style="color: #947555; display: inline;">&#9608;&#9608;&#9608;</div>
+                        <div style="color: #9DB3DC; display: inline;">&#9608;&#9608;&#9608;</div>
+                        <div style="color: #A184A4; display: inline;">&#9608;&#9608;&#9608;</div>
+                        <div style="color: #85B2AA; display: inline;">&#9608;&#9608;&#9608;</div>
+                        <div style="color: #BABABA; display: inline;">&#9608;&#9608;&#9608;</div>
+                    </div>               
+                </div>
+            </h1>
+            <div class="chunk">
+                <div class="title"> src </div>
+                <div class="links">
+                    <a class="link" href="https://github.com/jkarns275/c-pipes"> github </a>
+                    <br>
+                    <a class="link" href="https://github.com/jkarns275/c-pipes/blob/master/pipes.c"> c </a>
+                    <br>
+                    <a class="link" href="https://github.com/jkarns275/c-pipes/blob/master/obf.c"> obfuscated c </a>
+                    <br>
+                    <a class="link" href="https://github.com/jkarns275/c-pipes/blob/master/obf.c"> javascript </a>
+                </div>
+            </div>
+            <br>
+            <div class="chunk">
+                <div class="title"> demo </div>
+                <div class="links">
+                    <div id="terminal" style="bottom: 0; line-height: .8;"></div>
+                    <script>
+      	                var term = new Terminal({
+                            cols: 64,
+                            rows: 24
+                        });
+                        var w;
+                        term.open(document.getElementById('terminal'));
+                        if (typeof(Worker) != 'undefined') {
+                            w = new Worker('pipes_worker.js');
+                            w.onmessage = function(event) {
+                                term.write(event.data);
+                            };
+                            w.postMessage('');
+                        } else {
+                            term.write('Your browser is not supported :(')
+                        }
+                    </script>
+                </div>
+            </div>
+
+            </div>
+            <br><br>
+        </div>
+    </body>
+</html>
