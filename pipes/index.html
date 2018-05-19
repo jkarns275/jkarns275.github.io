@@ -1,11 +1,13 @@
 <html>
     <head>
-       <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./xterm.css" />
+        <script src="./xterm.js"></script>
     </head>
     <body>
         <div class="container">
             <h1 class="name">
-                <div class="title" style="width: 3em; height: auto;"> Joshua Karns </div>
+                <div class="title" style="width: 3em; height: auto;"> Pipes </div>
                 <div style="line-height: 1.2; letter-spacing: -1px; display: inline-block;">
                     <div style="display: flex;">
                         <div style="color: #777777; display: inline;">&#9608;&#9608;&#9608;</div>
@@ -30,34 +32,53 @@
                 </div>
             </h1>
             <div class="chunk">
-                <div class="title">
-                    projects
+                <div class="title"> 
+                    <a class="link" href="../index.html"> home </a>
                 </div>
+                <div class="links"><br><br></div>
+            </div>
+            <br>
+            <br>
+            <div class="chunk">
+                <div class="title"> src </div>
                 <div class="links">
-                    <a class="link" href="./pipes/index.html"> pipes </a>
+                    <a class="link" href="https://github.com/jkarns275/c-pipes/blob/master/pipes.c"> c </a>
                     <br>
-                    <a class="link" href="https://github.com/hitranonline/hapiest"> hapiest </a>
+                    <a class="link" href="https://github.com/jkarns275/c-pipes/blob/master/obf.c"> obfuscated c </a>
                     <br>
-                    <a class="link" href="https://github.com/jkarns275/stdgba"> stdgba </a>
+                    <a class="link" href="https://github.com/jkarns275/c-pipes/blob/master/pipes.js"> javascript </a>
                     <br>
-                    <a class="link" href="https://github.com/jkarns275"> github </a>
-                    <br>
+                    <a class="link" href="https://github.com/jkarns275/c-pipes"> github </a>
                 </div>
             </div>
             <br>
             <div class="chunk">
-                <div class="title">
-                    contact
-                </div>
+                <div class="title"> demo </div>
                 <div class="links">
-                    <a class="link" href="mailto:jkarns@oswego.edu"> email </a>
-                    <br>
-                    <a class="link" href="https://www.linkedin.com/in/jkarns/"> linkedin </a>
-                    <br>
-                    <a class="link" href="mailto:jkarns@oswego.edu"> cv (upon request) </a>
-                    <br>
+                    <div id="terminal"></div>
+                    <script>
+      	                var term = new Terminal({
+                            cols: 64,
+                            rows: 24
+                        });
+                        term.open(document.getElementById('terminal'));
+                        term.resize(64, 24);
+                        var w;
+                        if (typeof(Worker) != 'undefined') {
+                            w = new Worker('./pipes_worker.js');
+                            w.onmessage = function(event) {
+                                term.write(event.data);
+                            };
+                            w.postMessage('');
+                        } else {
+                            term.write('Your browser is not supported :(')
+                        }
+                    </script>
                 </div>
             </div>
+
+            </div>
+            <br><br>
         </div>
     </body>
 </html>
