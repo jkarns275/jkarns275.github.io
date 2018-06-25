@@ -1,8 +1,12 @@
 html {
+    height: 100%;
     background-color: #C0BEBE;
     color: #444444;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
+}
+body {
+    height: 100%;
 }
 
 a:link, a:visited {
@@ -11,10 +15,31 @@ a:link, a:visited {
 }
 
 .container {
+    height: 100%;
     position: fixed;
-    top: 10%;
-    left: 10%;
+    top: 5%;
+    left: 0%;
+    right: 0px;
     padding-left: 40px;
+}
+
+.subcontainer {
+    right: 0px;
+    margin-left: 10px;
+    padding-left: 10px;
+    float: left;
+    width: 50%;
+    height: 80% !important;
+    overflow: hidden;
+    border: none;
+    background-color: #C0BEBE;
+    display: inline-block;
+    height: auto;
+}
+
+.all-links { 
+    height: 80%;
+    float: left;
 }
 
 .chunk {
@@ -39,5 +64,3 @@ a:link, a:visited {
     padding-left: 10px;
     border-left: 1px solid #947555;
 }
-
-.links { }

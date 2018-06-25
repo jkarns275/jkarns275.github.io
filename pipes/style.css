@@ -8,22 +8,21 @@ html {
 a:link, a:visited {
     text-decoration: none;
     color: #947555;
+    text-shadow: 1px;
 }
 
 .container {
     position: fixed;
-    top: 10%;
-    left: 10%;
-    padding-left: 40px;
+    padding-left: 10px;
 }
 
 .chunk {
-    padding-left: 40px;
+    padding-left: 10px;
 }
 
 .name {
-    padding-left: 20px;
-    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-bottom: 10px;
 }
 
 .title {
@@ -31,7 +30,7 @@ a:link, a:visited {
     vertical-align: top;
     display: inline-block;
     padding-right: 12px;
-    width: 80px;
+    width: 40px;
 }
 
 .links {

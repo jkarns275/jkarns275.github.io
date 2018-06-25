@@ -29,35 +29,46 @@
                     </div>               
                 </div>
             </h1>
-            <div class="chunk">
-                <div class="title">
-                    projects
+            <div class="all-links">
+                <div class="chunk">
+                    <div class="title">
+                        projects
+                    </div>
+                    <div class="links">
+                        <a class="link" href="https://github.com/hitranonline/hapiest"> hapiest </a>
+                        <br>
+                        <a class="link" onclick="view('./pipes/index.html')"> pipes </a>
+                        <br>
+                        <a class="link" href="https://github.com/jkarns275/stdgba"> stdgba </a>
+                        <br>
+                        <a class="link" href="https://github.com/jkarns275"> github </a>
+                        <br>
+                    </div>
                 </div>
-                <div class="links">
-                    <a class="link" href="./pipes/index.html"> pipes </a>
-                    <br>
-                    <a class="link" href="https://github.com/hitranonline/hapiest"> hapiest </a>
-                    <br>
-                    <a class="link" href="https://github.com/jkarns275/stdgba"> stdgba </a>
-                    <br>
-                    <a class="link" href="https://github.com/jkarns275"> github </a>
-                    <br>
+                <br>
+                <div class="chunk">
+                    <div class="title">
+                        contact
+                    </div>
+                    <div class="links">
+                        <a class="link" href="mailto:jkarns@oswego.edu"> email </a>
+                        <br>
+                        <a class="link" href="https://www.linkedin.com/in/jkarns/"> linkedin </a>
+                        <br>
+                        <a class="link" href="mailto:jkarns@oswego.edu"> cv (upon request) </a>
+                        <br>
+                    </div>
                 </div>
             </div>
-            <br>
-            <div class="chunk">
-                <div class="title">
-                    contact
-                </div>
-                <div class="links">
-                    <a class="link" href="mailto:jkarns@oswego.edu"> email </a>
-                    <br>
-                    <a class="link" href="https://www.linkedin.com/in/jkarns/"> linkedin </a>
-                    <br>
-                    <a class="link" href="mailto:jkarns@oswego.edu"> cv (upon request) </a>
-                    <br>
-                </div>
-            </div>
+            <iframe class="subcontainer" id="subcontainer" style="display: none">
+            </iframe>
+            <script>
+                function view(path) {
+                    var element = document.getElementById('subcontainer'); 
+                    element.src = path;
+                    element.style.display = "inline-block";
+                }
+            </script>
         </div>
     </body>
 </html>
