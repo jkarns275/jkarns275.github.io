@@ -6,8 +6,8 @@ const YELLOW  = 33;
 const GREEN   = 32;
 const RED     = 31;
 
-const COLS = 24;
-const ROWS = 64;
+const COLS = 25;
+const ROWS = 40;
 const rows = ROWS;
 const cols = COLS;
 

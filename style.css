@@ -1,12 +1,8 @@
 html {
-    height: 100%;
     background-color: #C0BEBE;
     color: #444444;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-}
-body {
-    height: 100%;
 }
 
 a:link, a:visited {
@@ -15,6 +11,7 @@ a:link, a:visited {
 }
 
 .container {
+    width: 1024px;
     height: 100%;
     position: fixed;
     top: 5%;
@@ -30,7 +27,7 @@ a:link, a:visited {
     float: left;
     width: 50%;
     height: 80% !important;
-    overflow: hidden;
+    overflow: visible;
     border: none;
     background-color: #C0BEBE;
     display: inline-block;

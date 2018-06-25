@@ -39,4 +39,8 @@ a:link, a:visited {
     border-left: 1px solid #947555;
 }
 
+p {
+    padding-left: 5.5em;
+}
+
 .links { }

@@ -9,6 +9,9 @@
             <h1 class="name">
                 <div class="title" style="width: 3em; height: auto;"> Pipes </div>
             </h1>
+            <p>
+                <tt>pipes</tt> is a small terminal program that draws moving pipes.
+            </p>
             <br>
             <div class="chunk">
                 <div class="title"> src </div>
@@ -29,11 +32,11 @@
                     <div id="terminal"></div>
                     <script>
       	                var term = new Terminal({
-                            cols: 32,
+                            cols: 36,
                             rows: 24
                         });
                         term.open(document.getElementById('terminal'));
-                        term.resize(32, 24);
+                        term.resize(38, 24);
                         var w;
                         if (typeof(Worker) != 'undefined') {
                             w = new Worker('./pipes_worker.js');
