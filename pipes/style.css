@@ -1,5 +1,5 @@
 html {
-    background-color: #C0BEBE;
+    background-color: #b1a9a5;
     color: #444444;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
@@ -11,7 +11,13 @@ a:link, a:visited {
     text-shadow: 1px;
 }
 
+body {
+    margin: 0;
+    margin-top: 16px;
+}
+
 .container {
+    top: 16px;
     position: fixed;
     padding-left: 10px;
 }
@@ -21,6 +27,7 @@ a:link, a:visited {
 }
 
 .name {
+    margin-top: 0px;
     padding-left: 10px;
     padding-bottom: 10px;
 }

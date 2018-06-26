@@ -3,6 +3,12 @@ html {
     color: #444444;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
+    width: 1024px;
+}
+
+body {
+    overflow-x: auto;
+    width: 1024px;
 }
 
 a:link, a:visited {
@@ -52,7 +58,7 @@ a:link, a:visited {
     text-align: right;
     vertical-align: top;
     display: inline-block;
-    padding-right: 12px;
+    margin-right: 24px;
     width: 80px;
 }
 
