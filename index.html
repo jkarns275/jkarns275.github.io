@@ -1,73 +1,176 @@
 <html>
     <head>
        <link rel="stylesheet" href="style.css">
+       <title>Joshua Karns</title>
     </head>
     <body>
+        <script src="themes.js"></script>
         <div class="container">
-            <h1 class="name">
-                <div class="title" style="width: 3em; height: auto;"> Joshua Karns </div>
-                <div style="line-height: 1.2; letter-spacing: -1px; display: inline-block;">
-                    <div style="display: flex;">
-                        <div style="color: #777777; display: inline;">&#9608;&#9608;&#9608;</div>
-                        <div style="color: #FF0055; display: inline;">&#9608;&#9608;&#9608;</div>
-                        <div style="color: #739100; display: inline;">&#9608;&#9608;&#9608;</div>
-                        <div style="color: #503D15; display: inline;">&#9608;&#9608;&#9608;</div>
-                        <div style="color: #416979; display: inline;">&#9608;&#9608;&#9608;</div>
-                        <div style="color: #5B345E; display: inline;">&#9608;&#9608;&#9608;</div>
-                        <div style="color: #487B8F; display: inline;">&#9608;&#9608;&#9608;</div>
-                        <div style="color: #999999; display: inline;">&#9608;&#9608;&#9608;</div>
-                    </div>
-                    <div style="display: flex; top: 0px;">
-                        <div style="color: #999999; display: inline;">&#9608;&#9608;&#9608;</div>
-                        <div style="color: #D65E76; display: inline;">&#9608;&#9608;&#9608;</div>
-                        <div style="color: #88AA0B; display: inline;">&#9608;&#9608;&#9608;</div>
-                        <div style="color: #947555; display: inline;">&#9608;&#9608;&#9608;</div>
-                        <div style="color: #9DB3DC; display: inline;">&#9608;&#9608;&#9608;</div>
-                        <div style="color: #A184A4; display: inline;">&#9608;&#9608;&#9608;</div>
-                        <div style="color: #85B2AA; display: inline;">&#9608;&#9608;&#9608;</div>
-                        <div style="color: #BABABA; display: inline;">&#9608;&#9608;&#9608;</div>
-                    </div>               
-                </div>
+            <h1 class="name" style="line-height: 1.1; letter-spacing: 0px;">
+              <div class="title"> Joshua&nbsp;Karns, PhD&nbsp;Student </div>
+                <div class="subtitle">CV available upon request</div>
             </h1>
-            <div class="all-links">
-                <div class="chunk">
-                    <div class="title">
-                        projects
-                    </div>
-                    <div class="links">
-                        <a class="link" href="#" onclick="view('./stdgba/index.html')"> stdgba </a>
-                        <br>
-                        <a class="link" href="https://github.com/hitranonline/hapiest"> hapiest </a>
-                        <br>
-                        <a class="link" href="#" onclick="view('./pipes/index.html')"> pipes </a>
-                        <br>
-                        <a class="link" href="https://github.com/jkarns275"> github </a>
-                        <br>
-                    </div>
+            <div class="cellContainer" >
+                <div class="cellRow">
+                    <div class="cell" id="black" style="color: #777777;"></div>
+                    <div class="cell" id="red" style="color: #FF0055;"></div>
+                    <div class="cell" id="green" style="color: #739100;"></div>
+                    <div class="cell" id="yellow" style="color: #503D15;"></div>
+                    <div class="cell" id="blue" style="color: #416979;"></div>
+                    <div class="cell" id="purple" style="color: #5B345E;"></div>
+                    <div class="cell" id="cyan" style="color: #487B8F;"></div>
+                    <div class="cell" id="white" style="color: #999999;"></div>
                 </div>
                 <br>
-                <div class="chunk">
-                    <div class="title">
-                        contact
-                    </div>
-                    <div class="links">
-                        <a class="link" href="mailto:jkarns@oswego.edu"> email </a>
-                        <br>
-                        <a class="link" href="https://www.linkedin.com/in/jkarns/"> linkedin </a>
-                        <br>
-                        <a class="link" href="mailto:jkarns@oswego.edu"> cv (upon request) </a>
-                        <br>
-                    </div>
-                </div>
+                <div class="cellRow">
+                    <div class="cell" id="brightBlack" style="color: #999999;"></div>
+                    <div class="cell" id="brightRed" style="color: #D65E76; "></div>
+                    <div class="cell" id="brightGreen" style="color: #88AA0B; "></div>
+                    <div class="cell" id="brightYellow" style="color: #947555; "></div>
+                    <div class="cell" id="brightBlue" style="color: #9DB3DC; "></div>
+                    <div class="cell" id="brightPurple" style="color: #A184A4; "></div>
+                    <div class="cell" id="brightCyan" style="color: #85B2AA; "></div>
+                    <div class="cell" id="brightWhite" style="color: #BABABA; "></div>
+                </div>               
             </div>
-            <iframe class="subcontainer" id="subcontainer" style="display: none">
-            </iframe>
-            <script>
-                function view(path) {
-                    var element = document.getElementById('subcontainer'); 
-                    element.src = path;
-                    element.style.display = "inline-block";
+            <div class="links">
+              <a class="link" href="https://github.com/jkarns275">
+                <img src="img/github.png">
+                <span id="link">Github</span>
+              </a>
+              <a class="link" href="https://www.linkedin.com/in/jkarns/">
+                <img src="img/linkedin.png">
+                <span id="link">Linkedin</span>
+              </a>
+            </div>
+            <div class="links">
+              <a class="link" href="https://scholar.google.com/citations?user=hNvL3xQAAAAJ">
+                <img src="img/scholar.svg">
+                <span id="link">Academic Work</span>
+              </a>
+              <a class="link" href="mailto:josh@karns.dev">
+                <img src="img/email.png">
+                <span id="link">josh@karns.dev</span>
+              </a>
+            </div>
+            <script type="module">
+              import Color from "./color.js/color.js";
+              var i = 4;
+              function view(path) {
+                  var element = document.getElementById('subcontainer'); 
+                  element.src = path;
+                  element.style.display = "inline-block";
+              }
+              function hexToRgb(hex) {
+                var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+                return result ? [
+                  parseInt(result[1], 16),
+                  parseInt(result[2], 16),
+                  parseInt(result[3], 16)
+                ] : null;
+              }
+              const rgba2hex = (rgba) => `#${rgba.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+\.{0,1}\d*))?\)$/).slice(1).map((n, i) => (i === 3 ? Math.round(parseFloat(n) * 255) : parseFloat(n)).toString(16).padStart(2, '0').replace('NaN', '')).join('')}`
+              function componentToHex(c) {
+                var hex = c.toString(16);
+                return hex.length == 1 ? "0" + hex : hex;
+              }
+              
+              function rgbToHex(r, g, b) {
+                return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+              }
+
+              let keys = Object.keys(themes[0]);
+              ["name", "foreground", "background", "cursorColor"].map(k => keys.splice(keys.indexOf(k), 1));
+              let elements = keys.map(k => document.getElementById(k));
+              const sleep = ms => new Promise(r => setTimeout(r, ms));
+              
+              var canvas = document.createElement('canvas');
+              var ctx = canvas.getContext('2d');
+              function changeFavicon(colors) {
+                canvas.width = 16;
+                canvas.height = 16;
+                for (var i = 0; i < colors.length; i++) {
+                  ctx.fillStyle = "rgba(" + colors[i].coords.join(",") + ", 255)";
+                  let row = Math.floor(i / 8);
+                  let col = i % 8;
+                  let y = 2 * row;
+                  let x = col * 2;
+                  for (var j = 0; j < 4; j++)
+                    ctx.fillRect((x + 4 * j) % 16, 4 * j + y, 2, 2);
                 }
+                var link = document.getElementById("generated-icon");
+                if (link != null) {
+                  document.getElementsByTagName('head')[0].removeChild(link);
+                }
+                var link = document.createElement('link');
+                link.type = 'image/x-icon';
+                link.id = "generated-icon";
+                link.rel = 'shortcut icon';
+                link.href = canvas.toDataURL("image/x-icon");
+                document.getElementsByTagName('head')[0].appendChild(link);
+              }
+
+              async function displayGradients(N, gradients) {
+                for (let i = 0; i < N; i++) {
+                  var colors = [];
+                  for (let j = 0; j < gradients.length; j++) {
+                    colors.push(gradients[j][i]);
+                    let c = "rgb(" + gradients[j][i].coords.join(", ") + ")";
+                    elements[j].style.color = c;
+                    elements[j].style.backgroundColor = c;
+                  }
+                  changeFavicon(colors);
+                  await sleep(15);
+                }
+              }
+
+              async function changeTheme(N) {
+                var theme = themes[i % themes.length];
+                i += 1;
+                let gradients = [];
+                for (let i = 0; i < keys.length; i++) {
+                  let hex_current = hexToRgb(rgba2hex(elements[i].style.color));
+                  let hex_next = hexToRgb(theme[keys[i]]);
+                  let c0 = new Color("srgb", hex_current);
+                  let c1 = new Color("srgb", hex_next);
+                  var steps = Color.steps(c0, c1, { space: "lch", outputSpace: "srgb", maxSteps: N, steps: N});
+                  gradients.push(steps);
+                }
+                await displayGradients(N, gradients);
+              }
+
+              async function shuffleTheme(N) {
+                let t0 = Math.random() < 0.5;
+                for (let p = 0; p < 16; p++) {
+                  let gradients = [];
+                  for (let i = 0; i < keys.length; i++) {
+                    let hex_current = hexToRgb(rgba2hex(elements[i].style.color));
+                    var hex_next = null;
+                    if (t0) {
+                      hex_next = hexToRgb(rgba2hex(elements[(i + 1) % 16].style.color));
+                    } else {
+                      hex_next = hexToRgb(rgba2hex(elements[Math.floor(i / 8) * 8 + (i + 1) % 8].style.color));
+                    }
+                    let c0 = new Color("srgb", hex_current);
+                    let c1 = new Color("srgb", hex_next);
+                    var steps = Color.steps(c0, c1, { space: "lch", outputSpace: "srgb", maxSteps: N, steps: N});
+                    gradients.push(steps);
+                  }
+                  await displayGradients(N, gradients);
+                  if (p % 2 == 1)
+                    await sleep(250 + 200 * Math.random());
+                }
+              }
+
+              async function animation() {
+                while(true) {
+                  const N = 100;
+                  await changeTheme(50);
+                  await sleep(250 + 750 * Math.random());
+                  await shuffleTheme(50);
+                }
+              }
+              document.addEventListener('readystatechange', animation);
             </script>
         </div>
     </body>
